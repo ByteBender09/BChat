@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">BChat</string>
+    <string name="splash_logo">BChat</string>
+    <string name="splash_label">Bluetooth Chat App</string>
+    <string name="splash_slogan">Connect everyone</string>
+
+    //Element
+    <string name="button">Button</string>
+    <string name="image">Image</string>
+    <string name="text">Text</string>
+
+    //Register Screen
+    <string name="title_activity_register">Register Screen</string>
+    <string name="register_avatar_content">Avatar</string>
+    <string name="register_btn_title">Choose Avatar</string>
+    <string name="register_label">Enter name to chat</string>
+    <string name="register_input_placeholder">Ex: Koi..</string>
+    <string name="register_warning">*Name is too short!!</string>
+    <string name="register_btn_complete">Next</string>
+
+    //Message Screen
+    <string name="title_activity_message">Message Screen</string>
+    <string name="message_banner_txt">Messages</string>
+
+    //BoxChat Screen
+    <string name="title_activity_box">Box Chat Screen</string>
+    <string name="box_connected">Connected</string>
+    <string name="box_disconnected">Loss Connection</string>
+    <string name="box_input_placeholder">Enter to chat</string>
+    <string name="box_warning_title">Error connection</string>
+    <string name="box_warning_content">Please Enter Reconnect icon in the top right to reconnect to this device</string>
+
+    //Scan Screen
+    <string name="title_activity_scan">Scan Device Screen</string>
+    <string name="scan_banner_title">SCAN DEVICE</string>
+    <string name="scan_btn_start">Start Scan</string>
+    <string name="scan_btn_stop">Stop Scan</string>
+    <string name="scan_results_title">Found Devices</string>
+    <string name="scan_no_result">No Device Found</string>
+
+    //Loading Screen
+    <string name="loading_title">Loading</string>
+
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="0dp"
+        app:contentPadding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            tools:ignore="UselessParent">
+
+            <ImageButton
+                android:id="@+id/box_btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:background="@color/white"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/button" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/box_banner_avatar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_account"
+                android:contentDescription="@string/image"
+                android:layout_marginEnd="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/box_banner_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/text"/>
+
+                <TextView
+                    android:id="@+id/box_banner_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_connected"
+                    android:textStyle="normal"
+                    android:textSize="13sp"
+                    android:text="@string/box_connected"/>
+            </LinearLayout>
+
+        </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/box_list_messages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#00000000"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <LinearLayout
+        android:id="@+id/box_modal_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="22dp"
+        android:gravity="center_vertical"
+        android:elevation="2dp"
+        android:outlineProvider="bounds">
+
+        <ImageButton
+            android:id="@+id/box_modal_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location"
+            android:background="@color/white"
+            android:contentDescription="@string/button"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageButton
+            android:id="@+id/box_modal_file"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_file"
+            android:background="@color/white"
+            android:contentDescription="@string/button"
+            android:layout_marginEnd="16dp"/>
+
+        <EditText
+            android:id="@+id/box_modal_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:hint="@string/box_input_placeholder"
+            android:inputType="text"
+            android:layout_weight="1"
+            android:background="@drawable/input_box_chat"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:textSize="14sp"
+            android:focusableInTouchMode="true" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/box_modal_send"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            app:backgroundTint="#2F80ED"
+            app:cornerRadius="37dp"
+            app:icon="@drawable/ic_send"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="20dp"
+            android:layout_marginStart="10dp"
+            android:elevation="4dp"
+            android:contentDescription="@string/button"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/box_modal_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0ECEC"
+        android:paddingVertical="14dp"
+        android:paddingHorizontal="30dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/box_warning_title"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/box_warning_content"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:textColor="#6E6868"
+            />
+    </LinearLayout>
+
+</LinearLayout>
